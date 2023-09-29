@@ -17,9 +17,12 @@ class Case extends Model< InferAttributes<Case>,
   InferCreationAttributes<Case>
 > {
     declare caseId: CreationOptional<number>;
+    declare caseSubject: string;
     declare caseProgress: CaseType;
-    declare caseCreationDate: Date;
     declare caseMessage: string;
+
+    declare staff?: Staff;
+    declare client?: Client;
 
     declare getStaff: BelongsToGetAssociationMixin<Staff>;
     declare setStaff: BelongsToSetAssociationMixin<Staff, number>;
@@ -38,14 +41,15 @@ Case.init (
       autoIncrement: true,
       primaryKey: true,
     },
+    caseSubject: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     caseProgress: {
       type: DataTypes.ENUM,
       values: Object.values(CaseType),
       allowNull: false,
     }, 
-    caseCreationDate: {
-      type: DataTypes.DATE
-    },
     caseMessage: {
       type: DataTypes.STRING,
       allowNull: false,

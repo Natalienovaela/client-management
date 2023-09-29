@@ -41,25 +41,25 @@ export const seedDatabase = async () => {
 
 export const tutorial = async() => {
     let case1 = await Case.create({
-        caseCreationDate: new Date(Date.now()),
+        caseSubject: "Subject 1",
         caseMessage: "This is case 1",
         caseProgress: CaseType.IN_PROGRESS,  
     });
 
     let case2 = await Case.create({
-        caseCreationDate: new Date(Date.now()),
+        caseSubject: "Subject 2",
         caseMessage: "This is case 2",
         caseProgress: CaseType.IN_PROGRESS  
     })
 
     let case3 = await Case.create({
-        caseCreationDate: new Date(Date.now()),
+        caseSubject: "Subject 3",
         caseMessage: "This is case 3",
         caseProgress: CaseType.COMPLETED  
     })
 
     let case4 = await Case.create({
-        caseCreationDate: new Date(Date.now()),
+        caseSubject: "Subject 4",
         caseMessage: "This is case 4",
         caseProgress: CaseType.COMPLETED  
     })

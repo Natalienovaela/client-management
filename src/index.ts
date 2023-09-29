@@ -6,6 +6,11 @@ import * as dotenv from 'dotenv';
 import { conn } from "./db";
 import cors from "cors";
 
+import caseRoutes from "./routes/caseRoutes";
+import staffRoutes from "./routes/staffRoutes";
+import clientRoutes from "./routes/clientRoutes";
+
+
 import { seedDatabase, createDatabase } from "./models/index";
 
 const path = require("path");
@@ -56,3 +61,6 @@ app.use((req, res, next) => {
 
 //app.use("/api/employee/", employeeRoutes);
 
+app.use("/api/staff/", staffRoutes);
+app.use("/api/client/", clientRoutes);
+app.use("/api/case/", caseRoutes);
