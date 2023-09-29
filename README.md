@@ -6,7 +6,7 @@
     npm install <package>
 2. Installing mysql workbench and getting my database
     https://dev.mysql.com/downloads/windows/installer/8.0.html
-    Create new schema and name it client
+        Create new schema and name it client
 3. Adding environmental vars
     Create file ./.env (github ignores this file, keep sensitive information here)
     Change the dirname as needed in the dotenv config
