@@ -1,0 +1,77 @@
+Case Route API
+
+1. Create a New Case
+POST /api/case/createCase/:clientId 
+
+2. Get Case by CaseID
+GET /api/case/getCase/:caseId
+
+3. Get All Cases
+GET /api/case/getCases
+
+4. Get All Completed Cases
+GET /api/case/getCompletedCases
+
+5. Get All Outstanding Cases
+GET /api/case/getOutstandingCases
+
+6. Update Case
+PUT /api/case/updateCase/:caseid
+
+7. Assign Case to Staff
+GET /api/case/assignCaseToStaff/:caseId/:staffId
+
+
+Client Route API
+
+1. Create a New Client
+POST /api/client/createClient
+
+2. Delete Client
+DELETE /api/client/deleteClient/:clientId
+
+3. Get Client by ClientID
+GET /api/client/getClient/:clientId
+
+4. Get All Clients
+GET /api/client/getClients
+
+5. Update Client
+PUT /api/client/updateClient/:clientId
+
+6. Get Cases by Specified Client
+GET /api/client/getCasesByClient/:clientId
+
+
+Staff Route API
+
+1. Get Cases by Specified Staff
+GET /api/staff/getCasesByStaff/:staffId
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
